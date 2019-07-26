@@ -22,17 +22,18 @@ from sorting.quicksort import quick_sort
 from sorting.heapsort import heap_sort
 from sorting.combsort import comb_sort
 from sorting.monkeysort import monkey_sort
+from sorting.pyramidsort import pyramid_sort
 
 stype_dic = {'all': -1,
              'insertion-sort': 0, 'shell-sort':1,  'selection-sort': 2, 
              'merge-sort': 3,     'quick-sort': 4, 'heap-sort': 5,
-             'bubble-sort': 6,    'comb-sort': 7}
+             'bubble-sort': 6,    'comb-sort': 7, 'pyramid-sort': 8}
 titles = [r'Insertion Sort ($O(n^2)$)',          r'Shell Sort ($O(n \cdot log_2(n)^2)$)', r'Selection Sort ($O(n^2)$)',
           r'Merge Sort ($O(n \cdot log_2(n))$)', r'Quick Sort ($O(n \cdot log_2(n))$)',   r'Heap Sort ($O(n \cdot log_2(n))$)',
-          r'Bubble Sort ($O(n^2)$)',             r'Comb Sort ($O(n \cdot log_2(n))$)',    r'Monkey Sort ($O(n!)$)',]
+          r'Bubble Sort ($O(n^2)$)',             r'Comb Sort ($O(n \cdot log_2(n))$)',    r'Pyramid Sort ($O(nlogn)$)']
 funs = [insertion_sort, shell_sort, selection_sort,
         merge_sort,     quick_sort, heap_sort,
-        bubble_sort,    comb_sort,  monkey_sort]
+        bubble_sort,    comb_sort,  pyramid_sort]
 
 def create_original_data(dtype):
     data = []
